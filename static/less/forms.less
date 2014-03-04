@@ -27,7 +27,7 @@
     padding: 11px 19px;
     letter-spacing: .1em;
   }
-  
+
   &:visited {
     color: @black;
     &:hover {
@@ -79,3 +79,78 @@
   }
 }
 
+.dropdown {
+  text-align: center;
+  display: block;
+  float: left;
+  width: auto;
+  height: 60px;
+  border-right: 1px solid @gray5;
+
+  span {
+    display: inline-block;
+    max-width: 215px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    line-height: normal;
+  }
+
+  > a {
+    display: block;
+    height: 100%;
+    padding: 18px 10px;
+    text-decoration: none;
+
+    &:active {
+      outline: 0;
+    }
+
+    &:hover {
+      background-color: @white;
+      color:@black;
+
+      span {
+        color:@black;
+      }
+
+      .caret {
+        border-top-color: @black;
+      }
+    }
+  }
+
+  .caret {
+    border-top-color: @gray5;
+    border-width: 5px;
+  }
+
+  &.open {
+    background: @white;
+
+    span {
+      color: @black;
+    }
+    .caret {
+      color: @black;
+    }
+  }
+
+  .dropdown-menu {
+    padding: 5px 0 0;
+    width: 240px;
+
+    h4 {
+      margin: 10px 0;
+      padding: 0 15px; 
+    }
+
+    li ul {
+      margin-bottom: 20px;
+
+      a {
+        color:@turquoise60;
+      }
+    }
+  }
+}
