@@ -1,4 +1,5 @@
 {
+	"polymerFile": "../static/html/strapped-button.html",
 	"cssFile": "examples/css/style.min.css",
 	"jsFile": "examples/js/built.js",
 	"bootstrapCssFile": "//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css",
@@ -101,23 +102,23 @@
 	"forms": {
 		"buttons": [
 			{
-				"name": "Primary button",
+				"buttonName": "Primary button",
 				"className": "btn"
 			},
 			{
-				"name": "Secondary button",
+				"buttonName": "Secondary button",
 				"className": "btn secondary"
 			},
 			{
-				"name": "Disabled button",
+				"buttonName": "Disabled button",
 				"className": "btn disabled"
 			},
 			{
-				"name": "Special button",
+				"buttonName": "Special button",
 				"className": "btn special"
 			},
 			{
-				"name": "Link button",
+				"buttonName": "Link button",
 				"className": "btn btn-link"
 			}
 		]

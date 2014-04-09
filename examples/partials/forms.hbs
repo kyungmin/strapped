@@ -8,9 +8,7 @@
 	<h3>Buttons</h3>
 	<div class="strapped-preview">
 		{{#each buttons}}
-			<button class='inline {{className}}'>
-				{{name}}
-			</button>
+			<strapped-button classes="{{className}}" buttonName="{{buttonName}}"></strapped-button>
 		{{/each}}
 		<div class="inline close"></div>
 	</div>

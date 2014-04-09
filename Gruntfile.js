@@ -53,6 +53,14 @@ module.exports = function(grunt) {
 		},
 
 		watch: {
+			html: {
+				files: [
+					'static/html/*.html'
+				],
+				options: {
+					livereload: true
+				}
+			},
 			hbs: {
 				files: [
 					'examples/partials/*.hbs',

@@ -2,6 +2,8 @@
 <html>
 <head>
 	<title>Balanced | Strapped</title>
+    <script src="bower_components/platform/platform.js"></script>
+    <link rel="import" href="../static/html/strapped-button.html">
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="examples/css/style.min.css">
 </head>
@@ -557,25 +559,15 @@
 	<h3>Buttons</h3>
 	<div class="strapped-preview">
 		
-			<button class='inline btn'>
-				Primary button
-			</button>
+			<strapped-button classes="btn" buttonName="Primary button"></strapped-button>
 		
-			<button class='inline btn secondary'>
-				Secondary button
-			</button>
+			<strapped-button classes="btn secondary" buttonName="Secondary button"></strapped-button>
 		
-			<button class='inline btn disabled'>
-				Disabled button
-			</button>
+			<strapped-button classes="btn disabled" buttonName="Disabled button"></strapped-button>
 		
-			<button class='inline btn special'>
-				Special button
-			</button>
+			<strapped-button classes="btn special" buttonName="Special button"></strapped-button>
 		
-			<button class='inline btn btn-link'>
-				Link button
-			</button>
+			<strapped-button classes="btn btn-link" buttonName="Link button"></strapped-button>
 		
 		<div class="inline close"></div>
 	</div>
