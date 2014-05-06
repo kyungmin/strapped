@@ -22,6 +22,11 @@ module.exports = function(grunt) {
 				templateData: 'examples/data.json',
 				partials: 'examples/partials/*.hbs',
 				output: 'index.html'
+			},
+			notfound: {
+				template: 'examples/notfound.hbs',
+				templateData: 'examples/data.json',
+				output: 'notfound/notfound.html'
 			}
 		},
 
@@ -48,6 +53,32 @@ module.exports = function(grunt) {
 					expand: true,
 					src: ['**'],
 					dest: 'examples/fonts'
+				}]
+			},
+			images: {
+				files: [{
+					cwd: 'static/images',
+					expand: true,
+					src: ['**'],
+					dest: 'examples/images'
+				}]
+			},
+			notfound: {
+				files: [{
+					cwd: 'static/images/404',
+					expand: true,
+					src: ['**'],
+					dest: 'notfound/images'
+				},{
+					cwd: 'examples/css',
+					expand: true,
+					src: ['**.min.css'],
+					dest: 'notfound/css'
+				},{
+					cwd: 'static/fonts',
+					expand: true,
+					src: ['**'],
+					dest: 'notfound/fonts'
 				}]
 			}
 		},
@@ -89,6 +120,15 @@ module.exports = function(grunt) {
 				options: {
 					livereload: true
 				}
+			},
+			images: {
+				files: [
+					'static/images/*'
+				],
+				tasks: ['copy:images'],
+				options: {
+					livereload: true
+				}
 			}
 		},
 
@@ -114,10 +154,14 @@ module.exports = function(grunt) {
 		},
 
 		bump: {
-			scripts: {
-				files: ['static/*'],
-				updateConfigs: ['pkg'],
+			options: {
+				files: ['package.json', 'bower.json'],
+				createTag: true,
+			    tagName: 'v%VERSION%',
+			    tagMessage: 'Version v%VERSION%',
+				commit: true,
 				commitFiles: ['-a'],
+				commitMessage: 'Release v%VERSION%',
 				push: false
 			}
 		},
@@ -176,7 +220,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-lesslint');
 
 	grunt.registerTask('default', ['bower-install', '_devBuild', 'connect', 'open', 'watch']);
-	grunt.registerTask('_devBuild', ['copy', '_buildJS', '_buildCSS', '_buildHTML']);
+	grunt.registerTask('_devBuild', ['copy:fonts', 'copy:images', '_buildJS', '_buildCSS', 'copy:notfound', '_buildHTML']);
 	grunt.registerTask('_buildJS', ['clean', 'concat']);
 	grunt.registerTask('_buildCSS', ['less']);
 	grunt.registerTask('_buildHTML', ['compile-handlebars']);
