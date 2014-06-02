@@ -1,5 +1,5 @@
 {
-	"polymerFile": "../static/html/strapped-button.html",
+	"polymerFile": "../static/elements/strapped-table.html",
 	"cssFile": "examples/css/style.min.css",
 	"jsFile": "examples/js/built.js",
 	"bootstrapCssFile": "//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css",
@@ -109,6 +109,10 @@
 				"buttonName": "Secondary button",
 				"className": "btn secondary"
 			},
+      {
+        "name": "Small button",
+        "className": "btn sm"
+      },
 			{
 				"buttonName": "Disabled button",
 				"className": "btn disabled"

@@ -1138,8 +1138,9 @@ body {
 }
 #header {
   position: relative;
-  background-color: #1c1f26;
-  height: 50px;
+  background-color: #ffffff;
+  height: 70px;
+  margin-left: 180px;
 }
 #main {
   background-color: #ffffff;
@@ -1151,70 +1152,76 @@ body {
   min-height: 581px;
   position: absolute;
   height: 100%;
+  position: fixed;
+  z-index: 1;
 }
-#marketplace-nav.noshow {
-  background-color: #ffffff;
-}
-#marketplace-nav .button-groups {
-  text-align: center;
-}
-#marketplace-nav .button-groups a.btn {
-  display: inline-block;
-  padding: 9px 10px;
-  margin: 10px auto 0;
-}
-#marketplace-nav ul {
-  padding: 0;
-}
-#marketplace-nav li {
-  display: block;
-}
-#marketplace-nav li:first-of-type {
-  border-top: 1px solid #59606b;
-}
-#marketplace-nav li i {
-  font-size: 14px;
-  vertical-align: text-top;
-  margin-right: 10px;
-}
-#marketplace-nav li i.icon-addcustomer,
-#marketplace-nav li i.icon-bankaccount {
-  color: #ffffff;
-  display: inline-block;
-  height: 14px;
-  width: 14px;
-}
-#marketplace-nav li i.icon-addcustomer {
-  background-color: #a781ba;
-}
-#marketplace-nav li i.icon-bankaccount {
-  background-color: #528dcc;
-  font-size: 16px;
-  line-height: 35px;
-  margin-bottom: 9px;
-}
-#marketplace-nav li a {
-  font: normal normal normal 14px "Proxima Nova Reg", arial, sans-serif;
+#marketplace-nav #marketplaces .active {
+  font: normal normal normal 14px "Proxima Nova Semi Bold", arial, sans-serif;
   line-height: 20px;
   color: #000000;
-  color: #b1b9bd;
+}
+#marketplace-nav .sidebar {
+  padding: 0;
+}
+#marketplace-nav .sidebar > li {
+  display: block;
+  border-left: 4px solid transparent;
+}
+#marketplace-nav .sidebar > li.menu-active {
+  border-left: 4px solid #1675bf;
+}
+#marketplace-nav .sidebar > li > a {
+  font: normal normal normal 14px "Proxima Nova Semi Bold", arial, sans-serif;
+  line-height: 20px;
+  color: #000000;
+  color: #9196a1;
   padding: 12px 15px;
   display: block;
   position: relative;
   text-decoration: none;
 }
-#marketplace-nav li a:hover {
-  background-color: #303540;
+#marketplace-nav .sidebar > li > a:hover {
   color: #ffffff;
 }
-#marketplace-nav li a.active,
-#marketplace-nav li a:active {
-  background-color: #1c1f26;
+#marketplace-nav .sidebar > li > a.active,
+#marketplace-nav .sidebar > li > a:active {
   color: #ffffff;
 }
-#marketplace-nav li .nav-label {
-  color: inherit;
+#marketplace-nav .sidebar > li > a.expanded {
+  color: #9196a1;
+}
+#marketplace-nav .sidebar > li > a.expanded.active:hover {
+  color: #9196a1;
+}
+#marketplace-nav .sidebar > li > a [class^="icon-"] {
+  margin-right: 12px;
+  vertical-align: sub;
+}
+#marketplace-nav .sidebar > li .submenu {
+  display: none;
+}
+#marketplace-nav .sidebar > li .submenu.expanded {
   display: block;
+}
+#marketplace-nav .sidebar > li .submenu.expanded > li {
+  line-height: 50px;
+}
+#marketplace-nav .sidebar > li .submenu.expanded > li:first-of-type {
+  line-height: 16px;
+}
+#marketplace-nav .sidebar > li .submenu.expanded a {
+  font: normal normal normal 14px "Proxima Nova Semi Bold", arial, sans-serif;
+  line-height: 20px;
+  color: #000000;
+  color: #9196a1;
+  padding-left: 45px;
+  padding-bottom: 14px;
+  display: block;
+}
+#marketplace-nav .sidebar > li .submenu.expanded a.active,
+#marketplace-nav .sidebar > li .submenu.expanded a:active,
+#marketplace-nav .sidebar > li .submenu.expanded a:hover {
+  color: #ffffff;
 }
 .site-footer {
   background-color: #ffffff;
@@ -1390,6 +1397,13 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+.icon-edit {
+  color: #9196a1;
+}
+.icon-edit:hover {
+  color: #000000;
+  cursor: pointer;
+}
 .icon-download {
   background: url('../images/icons.png');
   width: 30px;
@@ -1473,152 +1487,191 @@ body {
 .icon-arrow-triangle-forward:before {
   content: "g";
 }
-.icon-avatar:before {
+.icon-balanced-dots:before {
   content: "h";
 }
-.icon-balanced-dots:before {
+.icon-balanced-logo-horizontal:before {
   content: "i";
 }
-.icon-balanced-logo-horizontal:before {
+.icon-business:before {
   content: "j";
 }
-.icon-business:before {
+.icon-carat-down:before {
   content: "k";
 }
-.icon-carat-down:before {
+.icon-carat-right:before {
   content: "l";
 }
-.icon-carat-right:before {
+.icon-carat-up:before {
   content: "m";
 }
-.icon-carat-up:before {
+.icon-csvexport:before {
   content: "n";
 }
-.icon-csvexport:before {
+.icon-docs:before {
   content: "o";
 }
-.icon-docs:before {
+.icon-document-upload:before {
   content: "p";
 }
-.icon-document-upload:before {
+.icon-github:before {
   content: "q";
 }
-.icon-edit:before {
+.icon-jsfiddle:before {
   content: "r";
 }
-.icon-github:before {
+.icon-key:before {
   content: "s";
 }
-.icon-jsfiddle:before {
+.icon-menu:before {
   content: "t";
 }
-.icon-key:before {
+.icon-navigation-arrow-back:before {
   content: "u";
 }
-.icon-loading:before {
+.icon-navigation-arrow-forward:before {
   content: "v";
 }
-.icon-menu:before {
+.icon-small-x:before {
   content: "w";
 }
-.icon-navigation-arrow-back:before {
+.icon-notification:before {
   content: "x";
 }
-.icon-navigation-arrow-forward:before {
+.icon-order:before {
   content: "y";
 }
-.icon-small-x:before {
+.icon-person:before {
   content: "z";
 }
-.icon-notification:before {
+.icon-plus-sign:before {
   content: "A";
 }
-.icon-order:before {
+.icon-productionmp:before {
   content: "B";
 }
-.icon-person:before {
+.icon-quora:before {
   content: "C";
 }
-.icon-plus-sign:before {
+.icon-settings:before {
   content: "D";
 }
-.icon-productionmp:before {
+.icon-star:before {
   content: "E";
 }
-.icon-quora:before {
+.icon-testmp:before {
   content: "F";
 }
-.icon-search:before {
+.icon-tooltip:before {
   content: "G";
 }
-.icon-settings:before {
+.icon-twitter:before {
   content: "H";
 }
-.icon-star:before {
+.icon-watchers:before {
   content: "I";
 }
-.icon-testmp:before {
+.icon-bank-account:before {
   content: "J";
 }
-.icon-tooltip:before {
+.icon-card:before {
   content: "K";
 }
-.icon-twitter:before {
+.icon-export:before {
   content: "L";
 }
-.icon-watchers:before {
+.icon-question-mark:before {
   content: "M";
 }
-.icon-bank-account:before {
+.icon-x:before {
   content: "N";
 }
-.icon-card:before {
+.icon-arrow-thin-backward:before {
   content: "O";
 }
-.icon-export:before {
+.icon-arrow-thin-forward:before {
   content: "P";
 }
-.icon-question-mark:before {
+.icon-customers:before {
   content: "Q";
 }
-.icon-x:before {
+.icon-disputes:before {
   content: "R";
 }
-.icon-arrow-thin-backward:before {
+.icon-my-marketplace:before {
   content: "S";
 }
-.icon-arrow-thin-forward:before {
+.icon-payments:before {
   content: "T";
 }
-.icon-customers:before {
+.icon-sort-descending:before {
   content: "U";
 }
-.icon-disputes:before {
+.icon-sort-ascending:before {
   content: "V";
 }
-.icon-my-marketplace:before {
+.icon-sort-none:before {
   content: "W";
 }
-.icon-payments:before {
+.icon-invoices:before {
   content: "X";
 }
-.icon-sort-descending:before {
+.icon-checkmark:before {
   content: "Y";
 }
-.icon-sort-ascending:before {
+.icon-pushtocard:before {
   content: "Z";
 }
-.icon-sort-none:before {
+.icon-card-processing:before {
   content: "0";
 }
-.icon-invoices:before {
+.icon-ach-debit:before {
   content: "1";
 }
-.icon-logs:before {
+.icon-ach-credit:before {
   content: "2";
 }
-.icon-checkmark:before {
+.icon-mastercard:before {
   content: "3";
+}
+.icon-discover:before {
+  content: "4";
+}
+.icon-american-express:before {
+  content: "5";
+}
+.icon-visa:before {
+  content: "6";
+}
+.icon-cent:before {
+  content: "7";
+}
+.icon-percent:before {
+  content: "8";
+}
+.icon-dollar:before {
+  content: "9";
+}
+.icon-calendar:before {
+  content: "!";
+}
+.icon-logs:before {
+  content: "\"";
+}
+.icon-search:before {
+  content: "#";
+}
+.icon-overview:before {
+  content: "$";
+}
+.icon-edit:before {
+  content: "%";
+}
+.icon-right-arc-arrow:before {
+  content: "&";
+}
+.icon-left-arc-arrow:before {
+  content: "'";
 }
 /*
 * animations.less
@@ -3609,16 +3662,22 @@ body {
 */
 *:focus {
   outline: none !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+  -webkit-box-shadow: none 0px 3px #999999 !important;
+  -moz-box-shadow: none 0px 3px #999999 !important;
+  box-shadow: none 0px 3px #999999 !important;
 }
 a {
   font: normal normal normal 14px "Proxima Nova Semi Bold", arial, sans-serif;
   line-height: 20px;
   color: #000000;
   color: #528dcc;
-  -webkit-transition: "color";
-  -moz-transition: "color";
-  -o-transition: "color";
-  transition: "color";
+  -webkit-transition: color;
+  -moz-transition: color;
+  -o-transition: color;
+  transition: color;
   -webkit-transition-duration: 200ms;
   -moz-transition-duration: 200ms;
   -o-transition-duration: 200ms;
@@ -3709,6 +3768,14 @@ button.secondary:hover {
   background-color: #f0f1f2;
   border-color: #d2d6d9;
 }
+.btn.sm,
+button.sm {
+  font: normal normal normal 12px "Proxima Nova Semi Bold", arial, sans-serif;
+  line-height: 16px;
+  color: #000000;
+  color: #ffffff;
+  padding: 8px 18px;
+}
 .btn.btn-link,
 button.btn-link {
   font: normal normal normal 12px "Proxima Nova Semi Bold", arial, sans-serif;
@@ -3758,10 +3825,10 @@ button button[disabled] {
 .dropdown .dropdown-toggle {
   display: block;
   text-decoration: none;
-  -webkit-transition: "background-color";
-  -moz-transition: "background-color";
-  -o-transition: "background-color";
-  transition: "background-color";
+  -webkit-transition: "background-color, color";
+  -moz-transition: "background-color, color";
+  -o-transition: "background-color, color";
+  transition: "background-color, color";
   -webkit-transition-duration: 200ms;
   -moz-transition-duration: 200ms;
   -o-transition-duration: 200ms;
@@ -3791,6 +3858,9 @@ button button[disabled] {
   float: right;
 }
 .dropdown .dropdown-menu {
+  font: normal normal normal 14px "Proxima Nova Reg", arial, sans-serif;
+  line-height: 20px;
+  color: #000000;
   position: absolute;
   padding: 5px 0 0;
   margin: 0;
@@ -3840,6 +3910,14 @@ button button[disabled] {
   color: #000000;
   cursor: pointer;
 }
+.dropdown .dropdown-menu .none {
+  font: normal normal normal 14px "Proxima Nova Reg", arial, sans-serif;
+  line-height: 20px;
+  color: #000000;
+  color: #9196a1;
+  padding: 10px 20px;
+  font-style: italic;
+}
 .dropdown .dropdown-menu.right {
   right: 0;
   left: auto;
@@ -3853,9 +3931,10 @@ button button[disabled] {
   right: 10px;
 }
 .dropdown.nav {
-  float: left;
   margin: 0;
-  height: 50px;
+  height: 70px;
+  width: 180px;
+  background-color: #303540;
 }
 .dropdown.nav .dropdown-toggle {
   height: 100%;
@@ -3864,20 +3943,20 @@ button button[disabled] {
   font: normal normal normal 14px "Proxima Nova Semi Bold", arial, sans-serif;
   line-height: 20px;
   color: #000000;
-  color: #b1b9bd;
+  color: #ffffff;
   line-height: 17px;
-  padding: 15px 0px 15px 10px;
+  padding: 25px 0 0 14px;
 }
 .dropdown.nav .dropdown-toggle .caret {
-  border-top-color: #757c87;
-  margin: 22px 5px;
+  border-top-color: #ffffff;
+  margin: 30px 5px;
 }
 .dropdown.nav .dropdown-toggle:active {
   outline: 0;
 }
 .dropdown.nav.open,
 .dropdown.nav .dropdown-toggle:hover {
-  background-color: #000000;
+  background-color: #1c1f26;
 }
 .dropdown.nav.open .dropdown,
 .dropdown.nav .dropdown-toggle:hover .dropdown {
@@ -3911,7 +3990,7 @@ button button[disabled] {
   padding: 0 10px 0 5px;
 }
 .dropdown.action .dropdown-toggle .caret {
-  border-width: 4px;
+  border-width: 5px;
   margin-left: 1px;
   border-top-color: #9196a1;
 }
@@ -3922,10 +4001,34 @@ button button[disabled] {
 .dropdown.action .dropdown-toggle:hover {
   background-color: #f0f1f2;
 }
-.dropdown.action .dropdown-menu {
-  font: normal normal normal 14px "Proxima Nova Reg", arial, sans-serif;
+.dropdown.borderless {
+  height: 34px;
+}
+.dropdown.borderless .dropdown-toggle {
+  padding: 5px 5px 0px;
+}
+.dropdown.borderless .dropdown-toggle span {
+  font: normal normal normal 14px "Proxima Nova Semi Bold", arial, sans-serif;
   line-height: 20px;
   color: #000000;
+  color: #9196a1;
+  padding: 0 4px;
+  max-width: none;
+}
+.dropdown.borderless .dropdown-toggle .caret {
+  margin-left: 0;
+  border-top-color: #9196a1;
+}
+.dropdown.borderless .dropdown-toggle:active {
+  outline: 0;
+}
+.dropdown.borderless.open span,
+.dropdown.borderless .dropdown-toggle:hover span {
+  color: #000000;
+}
+.dropdown.borderless.open .caret,
+.dropdown.borderless .dropdown-toggle:hover .caret {
+  border-top-color: #000000;
 }
 .dropdown.filter {
   display: inline-block;
@@ -3933,26 +4036,23 @@ button button[disabled] {
   height: 100%;
 }
 .dropdown.filter .dropdown-toggle {
-  color: #000000;
+  color: #59606b;
   padding: 8px 10px 4px;
 }
 .dropdown.filter .dropdown-toggle span {
   font: normal normal normal 12px "Proxima Nova Semi Bold", arial, sans-serif;
   line-height: 16px;
   color: #000000;
-  text-transform: uppercase;
+  color: #59606b;
   vertical-align: middle;
 }
 .dropdown.filter .dropdown-toggle .caret {
-  border-top-color: #000000;
+  border-top-color: #59606b;
   margin-top: 6px;
 }
 .dropdown.filter.open,
 .dropdown.filter:hover {
-  background-color: #f0f1f2;
-}
-.dropdown.filter .dropdown-menu a {
-  color: #000000;
+  background-color: #d2d6d9;
 }
 .dropdown.date .dropdown-toggle {
   height: 44px;
@@ -3996,9 +4096,6 @@ button button[disabled] {
   background-color: #f0f1f2;
 }
 .dropdown.date .dropdown-menu {
-  font: normal normal normal 14px "Proxima Nova Reg", arial, sans-serif;
-  line-height: 20px;
-  color: #000000;
   min-width: 230px;
 }
 form {
@@ -4044,7 +4141,6 @@ form input[type="color"] {
   width: 175px;
   padding: 5px;
   height: auto;
-  line-height: 22px;
   margin-bottom: 0;
 }
 form select.full,
@@ -4085,7 +4181,7 @@ form .input-prepend .add-on {
   line-height: 24px;
   color: #000000;
   color: #ffffff;
-  height: 30px;
+  height: 36px;
   min-width: 16px;
   line-height: 1.7;
   border-radius: 0;
@@ -4101,7 +4197,7 @@ form .input-prepend .add-on:first-child {
 /*
 * labels.less
 *
-* 
+*
 */
 h1 {
   font-family: "Proxima Nova Reg", arial, sans-serif;
@@ -4356,6 +4452,12 @@ pre {
 .sl-link:hover {
   color: #0063b4;
 }
+.sl-none {
+  font: normal normal normal 14px "Proxima Nova Reg", arial, sans-serif;
+  line-height: 20px;
+  color: #000000;
+  color: #9196a1;
+}
 .num-sm {
   color: #000000;
   font: normal normal normal 18px "Proxima Nova Bold", arial, sans-serif;
@@ -4554,32 +4656,39 @@ table.items {
   table-layout: fixed;
   width: 100%;
 }
-table.items th {
+table.items th,
+table.items thead {
   float: none;
-  box-sizing: border-box;
   padding: 0 10px;
-  border-top: 2px solid #000000;
+  border-top: 1px solid #d2d6d9;
+  background-color: #f0f1f2;
   border-bottom: 1px solid #d2d6d9;
   text-align: left;
 }
-table.items th:first-child {
+table.items th:first-child,
+table.items thead:first-child {
   padding-left: 25px;
 }
-table.items th:last-child {
+table.items th:last-child,
+table.items thead:last-child {
   padding-right: 25px;
 }
-table.items th:last-child.sortable {
+table.items th:last-child.sortable,
+table.items thead:last-child.sortable {
   padding-right: 5px;
 }
-table.items th > span {
+table.items th > span,
+table.items thead > span {
   font: normal normal normal 12px "Proxima Nova Semi Bold", arial, sans-serif;
   line-height: 16px;
   color: #000000;
-  text-transform: uppercase;
+  color: #59606b;
   line-height: 35px;
 }
 table.items th.type,
-table.items th.status {
+table.items thead.type,
+table.items th.status,
+table.items thead.status {
   padding: 0;
 }
 table.items tbody tr {
@@ -4592,6 +4701,12 @@ table.items tbody tr:hover {
 }
 table.items tbody tr:hover .no-results {
   background-color: #ffffff;
+}
+table.items tbody tr td,
+table.items tbody tr span {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 table.items tbody tr td {
   padding: 0 10px;
@@ -4667,6 +4782,36 @@ table.items tfoot td.load-more-results a {
 table.items .num,
 table.items .align-right {
   text-align: right;
+}
+.panel .panel-heading {
+  background-color: #f0f1f2;
+  padding: 55px 15px 10px 15px;
+  border-bottom: 1px solid #d2d6d9;
+}
+.panel .panel-heading span {
+  color: #00a268;
+}
+.panel .list-group {
+  margin: 0;
+}
+.panel .list-group .list-group-item {
+  display: block;
+  padding: 10px 15px;
+  border-bottom: 1px solid #d2d6d9;
+}
+.panel .list-group .horizontal-list-group-item {
+  display: inline-block;
+  padding: 10px 110px 10px 10px;
+  border-right: 1px solid #d2d6d9;
+  text-align: left;
+}
+.panel .list-group .horizontal-list-group-item h3 {
+  font: normal normal normal 14px "Proxima Nova Reg", arial, sans-serif;
+  line-height: 20px;
+  color: #000000;
+}
+.panel .list-group .horizontal-list-group-item:last-of-type {
+  border-right: none;
 }
 body {
   background-color: #f0f1f2;
@@ -5015,7 +5160,7 @@ pre {
   margin: 0;
 }
 #forms .strapped-preview:last-of-type {
-  min-height: 920px;
+  min-height: 300px;
 }
 #forms .inline {
   display: inline-block;
@@ -5029,6 +5174,7 @@ pre {
 }
 #forms #marketplace-nav {
   min-height: 100px;
+  height: 200px;
 }
 #icons ol,
 #icons ul {
