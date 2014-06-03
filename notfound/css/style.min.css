@@ -4655,6 +4655,7 @@ table th[class*="span"],
 table.items {
   table-layout: fixed;
   width: 100%;
+  border-spacing: 0;
 }
 table.items th,
 table.items thead {
