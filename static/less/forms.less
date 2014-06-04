@@ -58,7 +58,7 @@ a {
   .transition("background-color, border-color");
   .transition-duration(200ms);
 
-  &:not(.btn-sm):not(.close) {
+  &:not(.close) {
     min-width: 135px;
   }
 
@@ -95,9 +95,14 @@ a {
   }
 
   &.sm {
-    .sl-sm-sb;
-    color: @white;
+    font-size: 12px;
+    line-height: 14px;
     padding: 8px 18px;
+    color: @white;
+
+    &.secondary {
+      color: @gray4;
+    }
   }
 
   &.btn-link {
@@ -135,7 +140,11 @@ a {
 
 .btn-link {
   height: 30px;
-  padding: 0 13px;
+  padding-left: 26px;
+
+  i {
+    vertical-align: text-top;
+  }
 }
 
 
@@ -188,7 +197,7 @@ a {
     border-radius: 0;
     background: @white;
     text-align: left;
-    .box-shadow(0px, 2px, 3px, @gray2);
+    .box-shadow(0px, 1px, 4px, @gray2);
 
     > li {
       margin: 0;
@@ -270,7 +279,7 @@ a {
         .sl-sb;
         color: @white;
         line-height: 17px;
-        padding: 25px 0 0 14px;
+        padding: 25px 0 0 8px;
       }
 
       .caret {
@@ -338,16 +347,22 @@ a {
     height: 34px;
 
     .dropdown-toggle {
-      padding: 5px 5px 0px;
+      padding: 5px 5px 0 0;
+
+      i {
+        color: @gray4;
+        vertical-align: text-bottom;
+      }
 
       span {
         .sl-sb;
         color: @gray4;
-        padding: 0 4px;
+        padding: 0 2px;
         max-width: none;
       }
+
       .caret {
-        margin-left: 0;
+        margin-left: -1px;
         border-top-color: @gray4;
       }
 
@@ -357,7 +372,7 @@ a {
     }
 
     &.open, .dropdown-toggle:hover {
-      span {
+      i, span {
         color: @black;
       }
       .caret {
@@ -373,22 +388,31 @@ a {
 
     .dropdown-toggle {
       color: @gray6;
-      padding: 8px 10px 4px;
+      padding: 0 10px;
 
       span {
         .sl-sm-sb;
         color: @gray6;
+        line-height: 50px;
         vertical-align: middle;
       }
 
       .caret {
         border-top-color: @gray6;
-        margin-top: 6px;
+        margin-top: 21px;
       }
     }
 
     &.open, &:hover {
       background-color: @gray2;
+
+      span {
+        color: @black;
+      }
+
+      .caret {
+        border-top-color: @black;
+      }
     }
   }
 

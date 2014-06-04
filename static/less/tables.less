@@ -174,7 +174,7 @@ table.items {
 
   th, thead {
     float: none;
-    padding: 0 10px;
+    padding: 7px 10px;
     border-top: 1px solid @gray2;
     background-color: @gray1;
     border-bottom: 1px solid @gray2;
@@ -198,7 +198,7 @@ table.items {
       line-height: 35px;
     }
 
-    &.type, &.status {
+    &.has-filter {
       padding: 0;
     }
   }
@@ -225,7 +225,6 @@ table.items {
 
       td {
         padding: 0 10px;
-        line-height: 46px;
 
         &:first-child {
           padding-left: 25px;
@@ -250,8 +249,9 @@ table.items {
           span {
             padding: 0;
             display: block;
-            line-height: 46px;
+            line-height: 50px;
           }
+
           &:link, &:visited, &:hover, &:active {
             .sl;
             color: @textColor;
