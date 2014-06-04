@@ -1,5 +1,5 @@
 {
-	"polymerFile": "../static/elements/strapped-table.html",
+	"polymerFile": "static/elements/strapped-table.html",
 	"cssFile": "examples/css/style.min.css",
 	"jsFile": "examples/js/built.js",
 	"bootstrapCssFile": "//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css",
