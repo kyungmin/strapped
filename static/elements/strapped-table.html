@@ -1,0 +1,42 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">
+
+<polymer-element name="strapped-table">
+  <template bind="loadMore">
+    <link rel="stylesheet" type="text/css" href="../../examples/css/strapped.css">
+    <a class="show-all pull-right" href="#">Show all issues</a>
+
+    <table class="items">
+      <thead>
+        <th class="span6"><span>Repo</span></th>
+        <th class="span3 num"><span>Completed tasks</span></th>
+        <th class="span3 num"><span>Remaining tasks</span></th>
+      </thead>
+      <tbody>
+        <tr class="repo repo-template">
+          <td class="repo-name"></td>
+          <td class="completed num"></td>
+          <td class="remaining num"></td>
+        </tr>
+        <tr class="issues-template">
+          <td colspan="3">
+            <div class="issue issue-template">
+              <a class="issue-name"></a> <span class="issue-meta">(Opened by <span class="author"></span> <span class="created-at"></span>)</span>
+              <span class="status"></span>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <template if="{{ loadMore }}">
+      <div class="loading">
+        <div id="loadingSpinner" class="inline"></div>
+      </div>
+    </template>
+  </template>
+  <script>
+    Polymer('strapped-table', {
+      applyAuthorStyles: true
+    });
+  </script>
+</polymer-element>

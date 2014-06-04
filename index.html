@@ -2,10 +2,10 @@
 <html>
 <head>
 	<title>Balanced | Strapped</title>
-    <script src="bower_components/platform/platform.js"></script>
-    <link rel="import" href="../static/elements/strapped-table.html">
+  <script src="bower_components/platform/platform.js"></script>
 	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="examples/css/style.min.css">
+  <link rel="import" href="../static/elements/strapped-table.html">
 </head>
 <body>
 	<div id="main-nav" class="navbar fixed">
@@ -558,20 +558,20 @@
 
 	<h3>Buttons</h3>
 		
-			<strapped-button classes="btn" buttonName="Primary button"></strapped-button>
+			<a classes="btn" buttonName="Primary button"></a>
 		
-			<strapped-button classes="btn secondary" buttonName="Secondary button"></strapped-button>
+			<a classes="btn secondary" buttonName="Secondary button"></a>
 		
-			<strapped-button classes="btn sm" buttonName=""></strapped-button>
+			<a classes="btn sm" buttonName=""></a>
 		
-			<strapped-button classes="btn disabled" buttonName="Disabled button"></strapped-button>
+			<a classes="btn disabled" buttonName="Disabled button"></a>
 		
-			<strapped-button classes="btn special" buttonName="Special button"></strapped-button>
+			<a classes="btn special" buttonName="Special button"></a>
 		
-			<strapped-button classes="btn btn-link" buttonName="Link button"></strapped-button>
+			<a classes="btn btn-link" buttonName="Link button"></a>
 		
 		<div class="inline close"></div>
-	
+
 	<h3>Dropdowns</h3>
 	<div class="strapped-preview">
 		<div id="header">
@@ -960,28 +960,7 @@
   <h2>Dashboard</h2>
   <div class="strapped-preview">
 
-    <strapped-table>
-      <thead>
-        <th class="span6"><span>Repo</span></th>
-        <th class="span3 num"><span>Completed tasks</span></th>
-        <th class="span3 num"><span>Remaining tasks</span></th>
-      </thead>
-      <tbody>
-        <tr class="repo repo-template">
-          <td class="repo-name"></td>
-          <td class="completed num"></td>
-          <td class="remaining num"></td>
-        </tr>
-        <tr class="issues-template">
-          <td colspan="3">
-            <div class="issue issue-template">
-              <a class="issue-name"></a> <span class="issue-meta">(Opened by <span class="author"></span> <span class="created-at"></span>)</span>
-              <span class="status"></span>
-            </div>
-          </td>
-        </tr>
-      </tbody>
-    </strapped-table>
+    <strapped-table></strapped-table>
   </div>
 </div>
 
