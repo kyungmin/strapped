@@ -96,7 +96,7 @@ module.exports = function(grunt) {
 			},
 			js: {
 				files: [
-					'examples/js/strapped.js'
+					'examples/js/*.js'
 				],
 				tasks: ['_buildJS'],
 				options: {

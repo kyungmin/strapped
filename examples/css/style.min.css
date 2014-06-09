@@ -1189,6 +1189,9 @@ body {
 #marketplace-nav .sidebar > li > a.expanded {
   color: #9196a1;
 }
+#marketplace-nav .sidebar > li > a.expanded:hover {
+  color: #ffffff;
+}
 #marketplace-nav .sidebar > li > a.expanded.active:hover {
   color: #9196a1;
 }
@@ -3698,6 +3701,7 @@ a:visited {
   color: #528dcc;
 }
 a:hover {
+  cursor: pointer;
   color: #0063b4;
   text-decoration: none;
 }
@@ -5313,4 +5317,7 @@ pre {
   float: left;
   width: 40%;
   text-align: center;
+}
+#graphs #chart svg {
+  height: 300px;
 }
