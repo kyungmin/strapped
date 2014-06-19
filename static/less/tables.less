@@ -184,12 +184,14 @@ table{
       }
     }
   }
+
   tbody {
     tr {
       border-bottom: 1px solid @gray2;
     }
 
     td, span {
+      padding: 0;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
@@ -305,6 +307,10 @@ table{
 
   &.list {
     tbody {
+      tr:first-child {
+        border-top: 1px solid @gray2;
+      }
+
       td {
         span {
           display: block;
