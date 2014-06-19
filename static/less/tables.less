@@ -171,20 +171,6 @@ table{
   table-layout: fixed;
   width: 100%;
 
-  th, thead, td {
-    &:first-child {
-      padding-left: 25px;
-    }
-
-    &:last-child {
-      padding-right: 25px;
-
-      &.sortable {
-        padding-right: 5px;
-      }
-    }
-  }
-
   tbody {
     tr {
       border-bottom: 1px solid @gray2;
@@ -203,6 +189,21 @@ table{
   }
 
   &.items {
+
+    th, thead, td {
+      &:first-child {
+        padding-left: 25px;
+      }
+
+      &:last-child {
+        padding-right: 25px;
+
+        &.sortable {
+          padding-right: 5px;
+        }
+      }
+    }
+
     th, thead {
       float: none;
       padding: 7px 10px;
@@ -307,8 +308,14 @@ table{
 
   &.list {
     tbody {
-      tr:first-child {
-        border-top: 1px solid @gray2;
+      tr {
+        &:hover {
+          cursor: pointer;
+        }
+
+        &:first-child {
+          border-top: 1px solid @gray2;
+        }
       }
 
       td {
